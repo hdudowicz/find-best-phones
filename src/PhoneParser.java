@@ -1,4 +1,8 @@
+import java.io.BufferedReader;
+import java.io.FileReader;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class PhoneParser {
 	/*
@@ -19,11 +23,22 @@ public class PhoneParser {
 	 */
 	public static PhoneList parseFile(String filename) throws IOException {
 		// TODO: create a PhoneList
-		
+		List<Phone> phoneList = new ArrayList<>();
 		// TODO: create a BufferedReader to read from the file
-		
+		BufferedReader bufferedReader = null;
+		FileReader fileReader = null;
 		// TODO: for each line, parse it as a Phone and add it to the list 
-		
+		try {
+			fileReader = new FileReader("F:\\StudioProjects\\find-best-phones\\phone-data.txt");
+			bufferedReader = new BufferedReader(fileReader);
+
+			String currLine;
+			while ((currLine = bufferedReader.readLine()) != null){
+				phoneList.add(new Phone());
+			}
+		} catch (IOException){
+
+		}
 		return null;
 	}
 }
