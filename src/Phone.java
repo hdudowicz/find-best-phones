@@ -41,8 +41,9 @@ public class Phone {
 	public boolean dominates(Phone other) {
 		// TODO: implement this method
 		if (getScreenSize() >= other.getScreenSize() && getBatteryCapacity() >= other.getBatteryCapacity()){
-			
+            return true;
+		} else {
+		    return false;
 		}
-		return false;
 	}
 }
